@@ -1,0 +1,32 @@
+name: Run tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Asenna riippuvuudet
+        run: |
+          cd testaus/react-testing-demo
+          npm install
+
+      - name: Aja testit ja tuota kattavuusraportti
+        run: |
+          cd testaus/react-testing-demo
+          npm test -- --coverage
+
+      - name: Tallenna kattavuusraportti
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: testaus/react-testing-demo/coverage/
