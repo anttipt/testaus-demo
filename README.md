@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+[![codecov](https://codecov.io/gh/anttipt/react-testing-demo/branch/main/graph/badge.svg)](https://codecov.io/gh/anttipt/react-testing-demo)
 # 🛠️ Fullstack-blogialusta – kehitysvaiheessa
 
 Tämä projekti on rakenteilla oleva fullstack-blogialusta, jossa yhdistyvät React-frontend ja Express-backend. Tavoitteena on rakentaa moderni, testattu ja dokumentoitu alusta, jossa on rekisteröinti, kirjautuminen, suojatut reitit ja yhteydenottolomake. Projekti sisältää myös CI/CD-automatisoinnin ja testikattavuuden seurannan.
