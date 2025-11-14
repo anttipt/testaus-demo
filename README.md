@@ -1,32 +1,41 @@
 [![codecov](https://codecov.io/gh/anttipt/testaus-demo/branch/main/graph/badge.svg)](https://codecov.io/gh/anttipt/testaus-demo)
-# 🛠️ Fullstack-blogialusta – kehitysvaiheessa
 
-Tämä projekti on rakenteilla oleva fullstack-blogialusta, jossa yhdistyvät React-frontend ja Express-backend. Tavoitteena on rakentaa moderni, testattu ja dokumentoitu alusta, jossa on rekisteröinti, kirjautuminen, suojatut reitit ja yhteydenottolomake. Projekti sisältää myös CI/CD-automatisoinnin ja testikattavuuden seurannan.
+Tämä projekti demonstroi React-sovelluksen testauksen ja CI/CD-automatisoinnin GitHub Actionsin avulla.
 
-## ✅ Toteutetut ominaisuudet
+## 🔧 Ominaisuudet
 
-### 🔐 Autentikointi ja reitit
-- Rekisteröinti- ja kirjautumislomakkeet Reactilla
-- Backend-reitit testattu Postmanilla
-- Suojattu reitti, joka näyttää sisältöä vain kirjautuneille käyttäjille
+- ✅ **Unit- ja integraatiotestit** `npm test`-komennolla
+- 📦 **Kattavuusraportti** generoidaan `--coverage`-lipulla
+- 🚀 **GitHub Actions -workflow** käynnistyy automaattisesti pushin ja pull requestin yhteydessä
+- 📊 **Codecov-integraatio** lähettää kattavuusraportin ja näyttää badge-prosentin
+- 🛡️ **CODECOV_TOKEN** lisätty GitHubin Secretsiin turvallista lähetystä varten
+- 🖼️ **README-badgetit** näyttävät testien tilan ja kattavuusprosentin
+- 📁 **Selkeä projektirakenne**: kaikki tiedostot ovat projektin juuressa, ei turhia alikansioita
 
-### 📬 Yhteydenottolomake
-- Lomake toteutettu Reactilla
-- Lomake yhdistetty Express-backendiin
+## 📂 Rakenne
+```
+testaus-demo/ 
+├── package.json 
+├── src/ 
+├── coverage/ 
+└── .github/ 
+└── workflows/ 
+└── test.yml
+```
 
-### 🧪 Testaus
-- Unit- ja integraatiotestit lomakkeelle
-- Testikattavuusraportti luotu `react-scripts test --coverage`-komennolla
-- CI-workflow testien ajamiseen GitHub Actionsissa
 
-### ⚙️ CI/CD ja automaatio
-- GitHub Actions -workflow testien ja kattavuusraportin ajamiseen
-- Testikattavuusraportti tallennetaan artifactiksi
-- Codecov-integraatio työn alla
+## 🚀 Workflow
 
-### 📄 Dokumentointi
-- README sisältää projektin kuvauksen
-- Badgejen ja workflowjen lisäys käynnissä
+```yaml
+- name: Aja testit ja tuota kattavuusraportti
+  run: npm test -- --coverage
+
+- name: Lähetä kattavuusraportti Codecoviin
+  uses: codecov/codecov-action@v4
+  with:
+    token: ${{ secrets.CODECOV_TOKEN }}
+    files: coverage/lcov.info
+```	
 
 ## 🚀 Projektin käynnistys
 
@@ -55,20 +64,6 @@ npm test -- --coverage
 ```
 → Raportti syntyy kansioon coverage/lcov-report/index.html
 
-## 🚧 Keskeneräiset osat
-
-- Codecov-badge ei vielä näytä kattavuusprosenttia
-- CI-workflow ei vielä tallenna raporttia oikein
-- Testikattavuuden laajennus useampiin komponentteihin
-- Mahdollinen GitHub Pages -julkaisu kattavuusraportille
 
 
-gg
 
-dfsddgsd
-=======
-# testaus-demo
-testaus-demo
->>>>>>> c55e8422186418427d4c060f60ab1275f7b694b9
-
-KK
