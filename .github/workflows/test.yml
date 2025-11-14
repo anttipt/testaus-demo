@@ -16,17 +16,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Asenna riippuvuudet
-        run: |
-          cd testaus/react-testing-demo
-          npm install
+        run: npm install
 
       - name: Aja testit ja tuota kattavuusraportti
-        run: |
-          cd testaus/react-testing-demo
-          npm test -- --coverage
+        run: npm test -- --coverage
 
       - name: Tallenna kattavuusraportti
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: testaus/react-testing-demo/coverage/
+          path: coverage/

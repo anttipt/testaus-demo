@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛠️ Fullstack-blogialusta – kehitysvaiheessa
 
 Tämä projekti on rakenteilla oleva fullstack-blogialusta, jossa yhdistyvät React-frontend ja Express-backend. Tavoitteena on rakentaa moderni, testattu ja dokumentoitu alusta, jossa on rekisteröinti, kirjautuminen, suojatut reitit ja yhteydenottolomake. Projekti sisältää myös CI/CD-automatisoinnin ja testikattavuuden seurannan.
@@ -65,3 +66,7 @@ npm test -- --coverage
 gg
 
 dfsddgsd
+=======
+# testaus-demo
+testaus-demo
+>>>>>>> c55e8422186418427d4c060f60ab1275f7b694b9
