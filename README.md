@@ -64,6 +64,27 @@ npm test -- --coverage
 ```
 → Raportti syntyy kansioon coverage/lcov-report/index.html
 
+## 📊 Testikattavuusprosentti
+
+54% (prosenttiluku badgessa) = kuinka suuri osa koodiriveistä on testattu automaattisesti 
+unit-, integraatio- tai end-to-end-testeillä.
+
+🔍 Miten se lasketaan?
+Codecov analysoi coverage/lcov.info-tiedoston, joka syntyy kun ajat:
+```
+npm test -- --coverage
+```
+→ Se laskee:
+- Kuinka monta riviä koodista on olemassa
+- Kuinka monta niistä on käyty läpi testien aikana
+Esimerkiksi:
+- 1000 riviä koodia
+- 540 riviä käyty testien aikana
+- → 54% kattavuus
+
+
+
+
 
 
 
